@@ -1,6 +1,6 @@
 <template>
   <div class="definitionSection">
-    <img class="definitionImage" :src="'/flags/' + word.wordslug + '.jpg'" />
+    <img class="definitionImage" :src="'/flags/' + word.wordslug + '.png'" />
     <h1>{{ word.word }}</h1>
     <h6>
       <i>{{ word.shortdef }}</i>

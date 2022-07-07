@@ -31,3 +31,13 @@ input[name="word"], input[name="wordslug"] {
 input[name="shortdef"] {
     width: 80%
 }
+
+.dictherotitle {
+    font-size: 92px;
+}
+
+.dictsearch-container {
+    margin: auto;
+    padding: 0;
+    width: 35vw;
+}

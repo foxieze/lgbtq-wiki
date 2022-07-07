@@ -1,4 +1,9 @@
 <template>
+
+  <div class="dictsearch-container">
+      <input v-model="searchQuery" class="form-input dictsearchbox text-center" type="text" placeholder="Search..." />
+  </div>
+<br/>
   <div class="dict-table-container">
     <table class="table text-center">
       <thead>
@@ -6,10 +11,10 @@
         <th>Short Definition</th>
       </thead>
       <tbody>
-        <tr v-for="word in words" :key="word.id">
+        <tr v-for="word in filteredDictionary" :key="word.id">
           <td>
             <img
-              :src="'/flags/' + word.wordslug + '.jpg'"
+              :src="'/flags/' + word.wordslug + '.png'"
               class="dictflag"
             /><router-link :to="{ path: '/word/' + word.wordslug }">
               {{ word.word }}
@@ -31,6 +36,7 @@ export default {
   data() {
     return {
       words: [],
+      searchQuery: ""
     };
   },
   methods: {
@@ -44,6 +50,13 @@ export default {
   },
   mounted() {
     this.getAllWords();
+  },
+  computed:  {
+    filteredDictionary() {
+      return this.words.filter(word => {
+        return word.word.toLowerCase().includes(this.searchQuery.toLowerCase());
+      });
+    }
   }
 };
 </script>

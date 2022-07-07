@@ -4,7 +4,11 @@ import Word from "../models/Word.js";
 // Get all words
 export const getWords = async (req, res) => {
     try {
-        const words = await Word.findAll();
+        const words = await Word.findAll({
+            order: [
+                ['word', 'ASC']
+            ]
+        });
         res.send(words);
     } catch (err) {
         console.log(err);
