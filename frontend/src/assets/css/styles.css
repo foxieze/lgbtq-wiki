@@ -41,3 +41,7 @@ input[name="shortdef"] {
     padding: 0;
     width: 35vw;
 }
+
+.definitionText {
+    width: 65%;
+}

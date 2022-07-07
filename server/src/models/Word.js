@@ -23,6 +23,14 @@ const Word = sequelize.define('Word', {
     longdef: {
         type: DataTypes.TEXT,
         allowNull: false
+    },
+    attractionCategory: {
+        type: DataTypes.TEXT,
+        allowNull: true
+    },
+    category: {
+        type: DataTypes.TEXT,
+        allowNull: true
     }
 }, {
 
