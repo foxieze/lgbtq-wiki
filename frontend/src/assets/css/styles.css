@@ -1,0 +1,33 @@
+.dict-table-container {
+    width: 80%;
+    margin: auto;
+}
+
+.dictflag {
+    vertical-align: middle;
+    width: 35px;
+    height:20px;
+    padding: none;
+    margin: 0 10px;
+}
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.main {
+    padding: 10px 100px;
+}
+
+.definitionImage {
+    height: 200px;
+    box-shadow: 5px 5px 10px;
+    float: right;
+}
+
+input[name="word"], input[name="wordslug"] {
+    width: 300px;
+}
+input[name="shortdef"] {
+    width: 80%
+}
