@@ -27,10 +27,16 @@
     </div>
 
     <div class="definitionText">
+      
       <h1>{{ word.word }}</h1>
+      
       <h6>
         <i>{{ word.shortdef }}</i>
       </h6>
+      <div>
+        <label>Aliases: </label>
+        <span v-for="alias in word.aliases" :key="alias" class="chip">{{ alias }}</span>
+      </div>
       <div v-html="renderedDefinition"></div>
     </div>
   </div>
@@ -45,7 +51,8 @@ export default {
   data() {
     return {
       word: {},
-      renderedDefinition: ''
+      renderedDefinition: '',
+      aliases: []
     };
   },
   methods: {

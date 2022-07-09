@@ -9,6 +9,14 @@
       v-model="word"
       disabled
     />
+    <!-- Aliases Input -->
+    <label class="form-label" for="aliases">Aliases</label>
+    <input
+      v-model="aliases"
+      class="form-input"
+      placeholder="Aliases"
+      name="aliases"
+    />
     <label class="form-label" for="shortdef">Short Definition</label>
     <input
       v-model="shortdef"
@@ -56,7 +64,8 @@ export default {
         wordslug: this.wordslug,
         word: this.word,
         shortdef: this.shortdef,
-        longdef: this.longdef
+        longdef: this.longdef,
+        aliases: this.aliases.split(',').map(alias => alias.trim())
       };
       this.$emit("editWord", payload);
     },
@@ -67,6 +76,7 @@ export default {
         this.longdef = res.data.longdef;
         this.word = res.data.word;
         this.wordSlugAPI = res.data.wordslug;
+        this.aliases = res.data.aliases.join(',')
         console.log(res.data);
       });
     },

@@ -31,6 +31,10 @@ const Word = sequelize.define('Word', {
     category: {
         type: DataTypes.TEXT,
         allowNull: true
+    },
+    aliases: {
+        type: DataTypes.JSON,
+        allowNull: true
     }
 }, {
 
