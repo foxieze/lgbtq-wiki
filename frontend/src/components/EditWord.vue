@@ -77,7 +77,6 @@ export default {
         this.word = res.data.word;
         this.wordSlugAPI = res.data.wordslug;
         this.aliases = res.data.aliases.join(',')
-        console.log(res.data);
       });
     },
   },

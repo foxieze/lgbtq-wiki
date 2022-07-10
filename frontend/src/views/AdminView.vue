@@ -43,6 +43,7 @@
       ></DeleteWordComponent>
     </div>
   </div>
+  <input type="button" value="Logout" class="btn btn-error" @click="logout()" />
 </template>
 
 <script>
@@ -50,6 +51,7 @@ import CreateWordComponent from "@/components/CreateWord.vue";
 import DeleteWordComponent from "@/components/DeleteWord.vue";
 import { createWord, deleteWord } from "@/services/apiCalls.js";
 import router from "@/router";
+import { logoutUser } from "@/services/auth";
 
 export default {
   name: "AdminView",
@@ -65,16 +67,21 @@ export default {
   methods: {
     wordCreate(data) {
       createWord(data).then((res) => {
-        console.log("Word creation: " + res);
+        router.push('/');
       });
-      router.push('/');
+      
     },
     wordDelete(wordslug) {
       deleteWord(wordslug).then((res) => {
-        console.log("Deleted word: " + res);
+        router.push('/');
       });
-      router.push('/');
+      
     },
+    logout() {
+      logoutUser().then(() => {
+        router.push('/');
+      });
+    }
   },
 };
 </script>

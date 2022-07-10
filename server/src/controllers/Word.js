@@ -1,5 +1,6 @@
 // Import Word Model
 import Word from "../models/Word.js";
+import { serverValidate } from "./Auth.js";
  
 // Get all words
 export const getWords = async (req, res) => {
@@ -45,6 +46,10 @@ export const getWordBySlug = async (req, res) => {
  
 // Create a new word
 export const createWord = async (req, res) => {
+    if (!serverValidate(req)) {
+        res.status(401).send("Unauthorised!")
+        return;
+    }
     console.log('Attempting to create word.');
     try {
         await Word.create(req.body);
@@ -58,6 +63,10 @@ export const createWord = async (req, res) => {
  
 // Update word by id
 export const updateWord = async (req, res) => {
+    if (!serverValidate(req)) {
+        res.status(401).send("Unauthorised!")
+        return;
+    }
     try {
         await Word.update(req.body, {
             where: {
@@ -74,6 +83,10 @@ export const updateWord = async (req, res) => {
  
 // Delete word by id
 export const deleteWord = async (req, res) => {
+    if (!serverValidate(req)) {
+        res.status(401).send("Unauthorised!")
+        return;
+    }
     try {
         await Word.destroy({
             where: {

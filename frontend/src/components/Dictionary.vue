@@ -11,9 +11,9 @@
   <div class="dict-table-container">
     <table class="table text-center">
       <thead>
-        <th>Word</th>
+        <th>Word(s)</th>
         <th>Aliases</th>
-        <th>Short Definition</th>
+        <th class="shortDefRel">Short Definition</th>
       </thead>
       <tbody>
         <tr v-for="word in filteredDictionary" :key="word.id">
@@ -32,7 +32,7 @@
             </div>
           </td>
 
-          <td>{{ word.shortdef }}</td>
+          <td class="shortDefRel">{{ word.shortdef }}</td>
         </tr>
       </tbody>
     </table>
