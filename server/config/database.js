@@ -4,7 +4,8 @@ import { Sequelize } from "sequelize";
 // create connection
 const sequelize = new Sequelize('lgbtwiki', 'foxieze', '', {
     host: 'localhost',
-    dialect: 'mariadb'
+    dialect: 'mariadb',
+    logging: false
 });
  
 // export connection

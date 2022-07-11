@@ -66,13 +66,13 @@ export default {
   },
   methods: {
     wordCreate(data) {
-      createWord(data).then((res) => {
+      createWord(data).then(() => {
         router.push('/');
       });
       
     },
     wordDelete(wordslug) {
-      deleteWord(wordslug).then((res) => {
+      deleteWord(wordslug).then(() => {
         router.push('/');
       });
       

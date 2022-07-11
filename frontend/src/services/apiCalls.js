@@ -12,7 +12,6 @@ export async function createWord(word) {
 }
 
 export async function getWordFromSlug(wordslug) {
-    let url = 'http://localhost:3003/api/word/' + wordslug;
     let response = await axios.get('http://localhost:3003/api/word/' + wordslug);
     return response;
 }

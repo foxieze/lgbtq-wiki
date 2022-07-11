@@ -1,0 +1,9 @@
+services:
+  server:
+    build: ./server/Dockerfile
+    ports:
+      - "3078:3003"
+  frontend:
+    build: ./frontend/Dockerfile
+    ports:
+      - "3079:8080"
