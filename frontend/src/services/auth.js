@@ -5,13 +5,13 @@ export async function loginUser(username, password) {
         username: username,
         password: password
     };
-    let res = await axios.post('http://localhost:3003/login', payload);
+    let res = await axios.post(process.env.VUE_APP_BASE_API_URL + '/login', payload);
     return res;
 }
 
 export async function validateLogin() {
     try {
-        await axios.get('http://localhost:3003/validate');
+        await axios.get(process.env.VUE_APP_BASE_API_URL + '/validate');
     }
     catch (err) {
         return false;
@@ -21,7 +21,7 @@ export async function validateLogin() {
 
 export async function logoutUser() {
     try {
-        await axios.get('http://localhost:3003/logout');
+        await axios.get(process.env.VUE_APP_BASE_API_URL + '/logout');
     }
     catch (err) {
         console.log("Error!");

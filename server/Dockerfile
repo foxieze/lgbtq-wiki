@@ -1,7 +1,6 @@
-FROM node
-ENV NODE_ENV=production
+FROM node:18-buster
 WORKDIR /app
-COPY ["package.json", "package-lock.json" "./"]
-RUN npm install --production
+COPY ["package.json", "package-lock.json", "./"]
+RUN npm install
 COPY . .
 CMD [ "node", "index.js" ]

@@ -2,4 +2,4 @@ frontend/node_modules
 server/node_modules
 frontend/dist
 server/lib
-server/.env
+*.env

@@ -21,7 +21,7 @@ export async function loginUser(req, res) {
         const payload = {
             username: req.body.username
         }
-        jwt.sign(payload, process.env.JWT_TOKEN, { algorithm: 'HS256'}, (err, token) => {
+        jwt.sign(payload, process.env.JWT_SECRET, { algorithm: 'HS256'}, (err, token) => {
             res.cookie('token', token, { httpOnly: true });
             res.status(200).send('Authorised!');
             console.log(err);
@@ -36,7 +36,7 @@ export async function validateLogin(req, res) {
     let token = req.cookies.token;
     var decoded;
     try {
-        decoded = jwt.verify(token, process.env.JWT_TOKEN, { algorithm: 'HS256'});
+        decoded = jwt.verify(token, process.env.JWT_SECRET, { algorithm: 'HS256'});
     }
     catch (err) {
         res.clearCookie('token');
@@ -56,7 +56,7 @@ export async function serverValidate(req) {
     let token = req.cookies.token;
     var decoded;
     try {
-        decoded = jwt.verify(token, process.env.JWT_TOKEN, { algorithm: 'HS256'});
+        decoded = jwt.verify(token, process.env.JWT_SECRET, { algorithm: 'HS256'});
     }
     catch (err) {
         return false;

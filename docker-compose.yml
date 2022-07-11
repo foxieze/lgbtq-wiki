@@ -1,9 +1,14 @@
 services:
   server:
-    build: ./server/Dockerfile
+    build: ./server/.
+    env_file:
+      - global.env
+      - server.env
     ports:
       - "3078:3003"
   frontend:
-    build: ./frontend/Dockerfile
+    build: ./frontend/.
+    env_file:
+      - global.env
     ports:
-      - "3079:8080"
+      - "3079:80"
