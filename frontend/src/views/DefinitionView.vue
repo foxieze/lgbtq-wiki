@@ -1,6 +1,6 @@
 <template>
   <div class="definitionSection">
-    <div class="panel float-right">
+    <div class="panel definitionCard">
       <div class="panel-header text-center">
         <h4>{{ word.word }}</h4>
         <h6>Flag</h6>

@@ -68,6 +68,10 @@ input[name="shortdef"] {
     text-align: justify;
 }
 
+.definitionCard {
+    float: right;
+}
+
 @media (max-width: 768px) { 
     .main {
         padding: 10px 20px;
@@ -83,5 +87,12 @@ input[name="shortdef"] {
     }
     .definitionText {
         width: 95%;
+    }
+    .definitionCard {
+        float: none;
+        margin: auto;
+    }
+    .definitionText {
+        padding-top: 30px;
     }
  }
