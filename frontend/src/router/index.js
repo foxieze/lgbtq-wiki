@@ -35,7 +35,10 @@ const routes = [
   {
     path: '/admin/edit/:wordslug',
     name: 'editWord',
-    component: EditView
+    component: EditView,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/login',
