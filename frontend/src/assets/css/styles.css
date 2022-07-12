@@ -80,4 +80,7 @@ input[name="shortdef"] {
     .dictsearch-container {
         width: 70vw;
     }
+    .definitionText {
+        width: 95%;
+    }
  }
