@@ -3,13 +3,10 @@ services:
   server:
     build: ./server/.
     env_file:
-      - global.env
-      - server.env
+      - ./server/.env
     ports:
       - "3078:3003"
   frontend:
     build: ./frontend/.
-    env_file:
-      - global.env
     ports:
       - "3079:80"
