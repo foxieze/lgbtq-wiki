@@ -83,5 +83,8 @@ export default {
       });
     }
   },
+  created () {
+    document.title = "Admin - LGBTQ Wiki"
+  }
 };
 </script>

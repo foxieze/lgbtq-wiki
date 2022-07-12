@@ -17,5 +17,8 @@ export default {
   components: {
     DictionaryComponent
   },
+  mounted() {
+    document.title = "Home - LGBTQ Wiki"
+  }
 };
 </script>

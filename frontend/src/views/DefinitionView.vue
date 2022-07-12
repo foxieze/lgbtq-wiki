@@ -64,8 +64,11 @@ export default {
       });
     }
   },
-  mounted() {
+  created () {
     this.getWordInfo(this.$route.params.wordslug);
+  },
+  mounted () {
+    document.title = this.word.word + " - LGBTQ Wiki"
   }
 };
 </script>

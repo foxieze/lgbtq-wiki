@@ -24,6 +24,9 @@ export default {
           router.push('/');
       });
     }
+  },
+  mounted() {
+    document.title = "Editing " + this.$route.params.wordslug + " - LGBTQ Wiki"
   }
 };
 </script>
