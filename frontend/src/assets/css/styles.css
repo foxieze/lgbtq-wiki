@@ -72,6 +72,16 @@ input[name="shortdef"] {
     float: right;
 }
 
+.helpPageButtons a {
+    margin: 15px;
+}
+
+.helpPageButtons {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
 @media (max-width: 768px) { 
     .main {
         padding: 10px 20px;

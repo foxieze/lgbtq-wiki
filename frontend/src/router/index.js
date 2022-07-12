@@ -5,6 +5,9 @@ import AdminView from '../views/AdminView.vue'
 import EditView from '../views/EditView.vue'
 import LoginView from '../views/LoginView.vue'
 import { validateLogin } from '@/services/auth'
+import HelpIndexView from '../views/helppage/IndexView.vue'
+import HelpMeaningView from '../views/helppage/MeaningView.vue'
+import HelpAttractionView from '../views/helppage/AttractionView.vue'
 
 const routes = [
   {
@@ -38,6 +41,21 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LoginView
+  },
+  {
+    path: '/help',
+    name: 'help',
+    component: HelpIndexView
+  },
+  {
+    path: '/help/meaning',
+    name: 'helpMeaning',
+    component: HelpMeaningView
+  },
+  {
+    path: '/help/attraction',
+    name: 'typesOfAttraction',
+    component: HelpAttractionView
   }
 ]
 
