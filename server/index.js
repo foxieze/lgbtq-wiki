@@ -34,7 +34,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://192.168.1.140:3079",
+    origin: ["http://192.168.1.140:3079", "https://dict.fxyz.dev"],
     credentials: true,
   })
 );
