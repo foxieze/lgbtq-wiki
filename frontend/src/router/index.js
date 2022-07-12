@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import DefinitionView from '../views/DefinitionView.vue'
 import AdminView from '../views/AdminView.vue'
 import EditView from '../views/EditView.vue'
-import LoginComponent from '../components/Login.vue'
+import LoginView from '../views/LoginView.vue'
 import { validateLogin } from '@/services/auth'
 
 const routes = [
@@ -37,7 +37,7 @@ const routes = [
   {
     path: '/login',
     name: 'login',
-    component: LoginComponent
+    component: LoginView
   }
 ]
 

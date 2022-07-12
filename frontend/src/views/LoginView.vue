@@ -24,7 +24,7 @@ import router from "@/router";
 import { loginUser, validateLogin } from "@/services/auth";
 
 export default {
-  name: "LoginComponent",
+  name: "LoginView",
   data() {
     return {
       username: "",
@@ -43,6 +43,9 @@ export default {
         });
       });
     },
+    created() {
+      document.title = "Login - LGBTQ Wiki"
+    }
   },
 };
 </script>
