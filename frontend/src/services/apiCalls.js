@@ -6,7 +6,7 @@ export async function getAllWordsFromAPI() {
 }
 
 export async function createWord(word) {
-    let url = process.env.BASE_API_URL + '/api/word';
+    let url = process.env.VUE_APP_BASE_API_URL + '/api/word';
     let response = await axios.post(url, word);
     return response;
 }
