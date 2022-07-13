@@ -77,13 +77,12 @@
       rows="7"
     ></textarea>
     <br />
-    <button
+    <input
+      type="button"
       @click="createWord()"
-      name="submit"
       class="btn btn-primary input-group-btn"
-    >
-      Create
-    </button>
+      value="create"
+    />
   </form>
 </template>
 
