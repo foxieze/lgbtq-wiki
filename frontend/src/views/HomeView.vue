@@ -5,7 +5,7 @@
         <h1 class="dictherotitle">Dictionary</h1>
         <h4 class="dictherosubtitle">Simple search for LGBTQIA+ vocabulary</h4>
         <p>
-          If you don't understand any of this, I'd reccommend taking a look at
+          If you don't understand any of this, I'd recommend taking a look at
           <router-link to="/help/meaning">some of the help pages</router-link>!
           Or if you'd like help with something else,
           <router-link to="/help/somethingelse"
