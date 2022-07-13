@@ -60,12 +60,26 @@ export default {
   },
   methods: {
     editWord() {
+      var jsonAliases;
+      if (this.aliases) {
+        let formattedAliases = this.aliases
+          .split(",")
+          .map((item) => item.trim());
+        jsonAliases = JSON.parse(JSON.stringify(formattedAliases));
+      } else {
+        jsonAliases = undefined;
+      }
+
+      if (this.category != "Attraction") {
+        this.attractionCategory = undefined
+      }
+
       const payload = {
         wordslug: this.wordslug,
         word: this.word,
         shortdef: this.shortdef,
         longdef: this.longdef,
-        aliases: this.aliases.split(',').map(alias => alias.trim())
+        aliases: jsonAliases
       };
       this.$emit("editWord", payload);
     },

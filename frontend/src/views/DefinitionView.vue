@@ -69,4 +69,5 @@ export default {
     this.getWordInfo(this.$route.params.wordslug);
   }
 };
+
 </script>

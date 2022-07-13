@@ -36,6 +36,10 @@
       <input v-model="category" type="radio" name="category" value="Gender" />
       <i class="form-icon"></i> Gender
     </label>
+    <label class="form-radio">
+      <input v-model="category" type="radio" name="category" value="Gender" />
+      <i class="form-icon"></i> Relationship
+    </label>
     <!-- Attraction Category Input -->
     <div v-if="checkCategoryForAttraction()">
       <label class="form-label" for="category">Attraction Category</label>
@@ -105,13 +109,18 @@ export default {
     createWord() {
       var jsonAliases;
       if (this.aliases) {
-        let formattedAliases = this.aliases.split(",").map((item) => item.trim());
+        let formattedAliases = this.aliases
+          .split(",")
+          .map((item) => item.trim());
         jsonAliases = JSON.parse(JSON.stringify(formattedAliases));
-      }
-      else {
+      } else {
         jsonAliases = undefined;
       }
-      
+
+      if (this.category != "Attraction") {
+        this.attractionCategory = undefined
+      }
+
       const payload = {
         word: this.word,
         wordslug: this.wordslug,
