@@ -37,7 +37,7 @@
       <i class="form-icon"></i> Gender
     </label>
     <label class="form-radio">
-      <input v-model="category" type="radio" name="category" value="Gender" />
+      <input v-model="category" type="radio" name="category" value="Relationship" />
       <i class="form-icon"></i> Relationship
     </label>
     <!-- Attraction Category Input -->
