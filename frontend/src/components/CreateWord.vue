@@ -81,7 +81,7 @@
       type="button"
       @click="createWord()"
       class="btn btn-primary input-group-btn"
-      value="create"
+      value="Create"
     />
   </form>
 </template>
