@@ -103,8 +103,15 @@ export default {
   },
   methods: {
     createWord() {
-      let formattedAliases = this.aliases.split(",").map((item) => item.trim());
-      let jsonAliases = JSON.parse(JSON.stringify(formattedAliases));
+      var jsonAliases;
+      if (this.aliases) {
+        let formattedAliases = this.aliases.split(",").map((item) => item.trim());
+        jsonAliases = JSON.parse(JSON.stringify(formattedAliases));
+      }
+      else {
+        jsonAliases = undefined;
+      }
+      
       const payload = {
         word: this.word,
         wordslug: this.wordslug,
