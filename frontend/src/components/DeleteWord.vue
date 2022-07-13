@@ -5,7 +5,7 @@
     <label class="form-label" for="wordslug">Word Slug</label>
     <input v-model="wordslug" class="form-input" placeholder="Word Slug" name="wordslug"/>
     <br/>
-    <input @click="deleteWord()" name="submit" type="submit" class="btn btn-error input-group-btn" />
+    <input @click="deleteWord()" value="Delete" type="button" class="btn btn-error input-group-btn" />
 </form>
 
 </template>
