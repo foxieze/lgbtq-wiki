@@ -61,14 +61,12 @@ export default {
       wordPromise.then((res) => {
         this.word = res.data;
         this.renderedDefinition = marked(this.word.longdef);
+        document.title = this.word.word + " - LGBTQ Wiki"
       });
     }
   },
   created () {
     this.getWordInfo(this.$route.params.wordslug);
-  },
-  mounted () {
-    document.title = this.word.word + " - LGBTQ Wiki"
   }
 };
 </script>
